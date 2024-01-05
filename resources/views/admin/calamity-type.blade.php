@@ -128,11 +128,8 @@
                             @method('DELETE')
                             <input type="hidden" class="form-control" id="delete-id" name="id">
                             <!-- Placeholders for displaying data -->
-                            <div class="mb-3 alert alert-warning" id="delete-calamity-type"></div>
-                            <div class="mb-3 alert alert-warning" id="delete-created-at"></div>
-                            <div class="mb-3 alert alert-warning" id="delete-updated-at"></div>
                         </div>
-                        <div class="modal-footer d-flex justify-content-end">
+                        <div class="modal-footer d-flex justify-content-center">
                             <a href="#" class="btn btn-secondary mr-2" data-dismiss="modal">Close</a>
                             <button type="submit" class="btn btn-danger">Delete</button>
                         </div>
