@@ -271,14 +271,10 @@
                 var nameParts = $(this).closest('tr').find('td:eq(1)').find('b').text().split(' ');
                 var lastName = nameParts[0] || ""; // Index 0 for Last Name
                 var firstName = nameParts[1] || ""; // Index 1 for First Name
-
-                // Extract Middle Name by finding the part with both alphabetical and numeric characters
                 var middleName = "";
                 var nameTokens = $(this).closest('tr').find('td:eq(1)').find('b').text().split(' ');
                 for (var i = 2; i < nameTokens.length; i++) {
-                    // Check if the token contains both alphabetical and numeric characters
                     if (/^[a-zA-Z]+.*\d/.test(nameTokens[i])) {
-                        // Separate the alphabetical and numeric parts of the token
                         var match = nameTokens[i].match(/([a-zA-Z]+)([0-9]+)/);
                         middleName = match ? match[1] : "";
                         break;
